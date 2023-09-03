@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		639017BB2AA38E4E00115605 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639017BA2AA38E4E00115605 /* NetworkService.swift */; };
+		639017BE2AA3D4D100115605 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639017BD2AA3D4D100115605 /* NetworkDataFetcher.swift */; };
+		639017C02AA3D53500115605 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639017BF2AA3D53500115605 /* SearchResults.swift */; };
+		639017C32AA3DBCF00115605 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639017C22AA3DBCF00115605 /* PhotoCell.swift */; };
+		639017C62AA3E1EB00115605 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 639017C52AA3E1EB00115605 /* SDWebImage */; };
+		639017C82AA3E1EB00115605 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 639017C72AA3E1EB00115605 /* SDWebImageMapKit */; };
 		63C1AC622AA0F5EC0071DCF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1AC612AA0F5EC0071DCF5 /* AppDelegate.swift */; };
 		63C1AC642AA0F5EC0071DCF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1AC632AA0F5EC0071DCF5 /* SceneDelegate.swift */; };
 		63C1AC662AA0F5EC0071DCF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C1AC652AA0F5EC0071DCF5 /* ViewController.swift */; };
@@ -37,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		639017BA2AA38E4E00115605 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		639017BD2AA3D4D100115605 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		639017BF2AA3D53500115605 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		639017C22AA3DBCF00115605 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		63C1AC5E2AA0F5EC0071DCF5 /* PhotoGalery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGalery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C1AC612AA0F5EC0071DCF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C1AC632AA0F5EC0071DCF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639017C82AA3E1EB00115605 /* SDWebImageMapKit in Frameworks */,
+				639017C62AA3E1EB00115605 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		639017BC2AA39BFF00115605 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				639017BA2AA38E4E00115605 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		639017C12AA3D54800115605 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				639017BF2AA3D53500115605 /* SearchResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		63C1AC552AA0F5EC0071DCF5 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +131,13 @@
 			children = (
 				63C1AC612AA0F5EC0071DCF5 /* AppDelegate.swift */,
 				63C1AC632AA0F5EC0071DCF5 /* SceneDelegate.swift */,
+				639017BC2AA39BFF00115605 /* Network */,
 				63C1AC652AA0F5EC0071DCF5 /* ViewController.swift */,
 				63C1AC942AA196B80071DCF5 /* MainTabBarController.swift */,
+				639017BD2AA3D4D100115605 /* NetworkDataFetcher.swift */,
+				639017C12AA3D54800115605 /* Models */,
 				63C1AC962AA197710071DCF5 /* PhotosCollectionViewController.swift */,
+				639017C22AA3DBCF00115605 /* PhotoCell.swift */,
 				63C1AC6A2AA0F5ED0071DCF5 /* Assets.xcassets */,
 				63C1AC6C2AA0F5ED0071DCF5 /* LaunchScreen.storyboard */,
 				63C1AC6F2AA0F5ED0071DCF5 /* Info.plist */,
@@ -146,6 +178,10 @@
 			dependencies = (
 			);
 			name = PhotoGalery;
+			packageProductDependencies = (
+				639017C52AA3E1EB00115605 /* SDWebImage */,
+				639017C72AA3E1EB00115605 /* SDWebImageMapKit */,
+			);
 			productName = PhotoGalery;
 			productReference = 63C1AC5E2AA0F5EC0071DCF5 /* PhotoGalery.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 63C1AC552AA0F5EC0071DCF5;
+			packageReferences = (
+				639017C42AA3E1EB00115605 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 63C1AC5F2AA0F5EC0071DCF5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,10 +299,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				639017BE2AA3D4D100115605 /* NetworkDataFetcher.swift in Sources */,
+				639017C32AA3DBCF00115605 /* PhotoCell.swift in Sources */,
 				63C1AC662AA0F5EC0071DCF5 /* ViewController.swift in Sources */,
 				63C1AC622AA0F5EC0071DCF5 /* AppDelegate.swift in Sources */,
 				63C1AC952AA196B80071DCF5 /* MainTabBarController.swift in Sources */,
 				63C1AC972AA197710071DCF5 /* PhotosCollectionViewController.swift in Sources */,
+				639017BB2AA38E4E00115605 /* NetworkService.swift in Sources */,
+				639017C02AA3D53500115605 /* SearchResults.swift in Sources */,
 				63C1AC642AA0F5EC0071DCF5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +633,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		639017C42AA3E1EB00115605 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		639017C52AA3E1EB00115605 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 639017C42AA3E1EB00115605 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		639017C72AA3E1EB00115605 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 639017C42AA3E1EB00115605 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 63C1AC562AA0F5EC0071DCF5 /* Project object */;
 }

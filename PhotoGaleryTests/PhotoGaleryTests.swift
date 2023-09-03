@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import PhotoGalery
+//@testable import PhotoGalery
 
 final class PhotoGaleryTests: XCTestCase {
 
